@@ -17,28 +17,28 @@ import java.util.logging.Logger;
  *
  * @author Patricio
  */
-public class ConeccionPG {
+public class ConexionPG {
     
     Connection con;
     
-    String cadenaConeccion="jdbc:postgresql://localhost:5432/mvc";
+    String cadenaConexion="jdbc:postgresql://localhost:5432/mvc";
     String usuarioPG="postgres";
     String contraPG="apecs";
 
-    public ConeccionPG() {
+    public ConexionPG() {
         
         try {
             Class.forName("org.postgresql.Driver");
             System.out.println("Driver OK");
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ConeccionPG.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConexionPG.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         try {
-          con=DriverManager.getConnection(cadenaConeccion, usuarioPG, contraPG);
+          con=DriverManager.getConnection(cadenaConexion, usuarioPG, contraPG);
            System.out.println("Coneccion OK");
         } catch (SQLException ex) {
-            Logger.getLogger(ConeccionPG.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConexionPG.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         
@@ -51,7 +51,7 @@ public class ConeccionPG {
             return st.executeQuery(sql);
             
         } catch (SQLException ex) {
-            Logger.getLogger(ConeccionPG.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConexionPG.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
         
@@ -66,7 +66,7 @@ public class ConeccionPG {
             st.close();
             return true;
         } catch (SQLException ex) {
-            Logger.getLogger(ConeccionPG.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConexionPG.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
         

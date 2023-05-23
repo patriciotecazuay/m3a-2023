@@ -6,6 +6,8 @@
 package mvc.modelo;
 
 import java.sql.Date;
+import java.time.LocalDate;
+import java.time.Period;
 
 /**
  *
@@ -16,6 +18,7 @@ public class Persona {
     private String nombrePersona;
     private String apellidosPersona;
     private Date fechaNacimiento;
+    private int edadPersona;
 
     public Persona() {
     }
@@ -26,6 +29,15 @@ public class Persona {
         this.apellidosPersona = apellidosPersona;
         this.fechaNacimiento = fechaNacimiento;
     }
+
+    public int getEdadPersona() {
+        return edadPersona;
+    }
+
+//    public void setEdadPersona(String edadPersona) {
+//        
+//        this.edadPersona = edadPersona;
+//    }
 
     public String getIdPersona() {
         return idPersona;
@@ -57,6 +69,10 @@ public class Persona {
 
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+        LocalDate ldate= fechaNacimiento.toLocalDate();
+        Period periodo=Period.between(ldate, LocalDate.now());
+        this.edadPersona=periodo.getYears();
+        
     }
     
     

@@ -5,7 +5,9 @@
  */
 package mvc.vista;
 
+import com.toedter.calendar.JDateChooser;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -32,6 +34,19 @@ public class VistaPersonas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        dlgCrearEditar = new javax.swing.JDialog();
+        jLabel2 = new javax.swing.JLabel();
+        txtCedula = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtNombres = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtApellidos = new javax.swing.JTextField();
+        lblFoto = new javax.swing.JLabel();
+        bntAceptar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        btnExaminar = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        calFechaNac = new com.toedter.calendar.JDateChooser();
         jPanel1 = new javax.swing.JPanel();
         btnConsultar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -44,6 +59,87 @@ public class VistaPersonas extends javax.swing.JFrame {
         lblPersonas = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblPersonas = new javax.swing.JTable();
+
+        jLabel2.setText("CEDULA");
+
+        jLabel3.setText("NOMBRES");
+
+        jLabel4.setText("APELLIDOS");
+
+        lblFoto.setBackground(new java.awt.Color(153, 153, 153));
+        lblFoto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        bntAceptar.setText("Aceptar");
+
+        btnCancelar.setText("Cancelar");
+
+        btnExaminar.setText("Examinar...");
+
+        jLabel5.setText("NACIMIENTO");
+
+        javax.swing.GroupLayout dlgCrearEditarLayout = new javax.swing.GroupLayout(dlgCrearEditar.getContentPane());
+        dlgCrearEditar.getContentPane().setLayout(dlgCrearEditarLayout);
+        dlgCrearEditarLayout.setHorizontalGroup(
+            dlgCrearEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dlgCrearEditarLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(dlgCrearEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(dlgCrearEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(dlgCrearEditarLayout.createSequentialGroup()
+                            .addComponent(bntAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(dlgCrearEditarLayout.createSequentialGroup()
+                            .addComponent(jLabel3)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(txtNombres))
+                        .addGroup(dlgCrearEditarLayout.createSequentialGroup()
+                            .addComponent(jLabel2)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(dlgCrearEditarLayout.createSequentialGroup()
+                            .addComponent(jLabel4)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(dlgCrearEditarLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(calFechaNac, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(dlgCrearEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblFoto, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnExaminar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+        dlgCrearEditarLayout.setVerticalGroup(
+            dlgCrearEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dlgCrearEditarLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(dlgCrearEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblFoto, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(dlgCrearEditarLayout.createSequentialGroup()
+                        .addGroup(dlgCrearEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(dlgCrearEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(dlgCrearEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(dlgCrearEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addComponent(calFechaNac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(25, 25, 25)
+                .addGroup(dlgCrearEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bntAceptar)
+                    .addComponent(btnCancelar)
+                    .addComponent(btnExaminar))
+                .addContainerGap(85, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -126,7 +222,15 @@ public class VistaPersonas extends javax.swing.JFrame {
             new String [] {
                 "CEDULA", "NOMBRES", "APELLIDOS", "EDAD"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(tblPersonas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -140,7 +244,7 @@ public class VistaPersonas extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -150,9 +254,81 @@ public class VistaPersonas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public JDateChooser getCalFechaNac() {
+        return calFechaNac;
+    }
+
+    public void setCalFechaNac(JDateChooser calFechaNac) {
+        this.calFechaNac = calFechaNac;
+    }
+
+
+    public JButton getBntAceptar() {
+        return bntAceptar;
+    }
+
+    public void setBntAceptar(JButton bntAceptar) {
+        this.bntAceptar = bntAceptar;
+    }
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public void setBtnCancelar(JButton btnCancelar) {
+        this.btnCancelar = btnCancelar;
+    }
+
+    public JButton getBtnExaminar() {
+        return btnExaminar;
+    }
+
+    public void setBtnExaminar(JButton btnExaminar) {
+        this.btnExaminar = btnExaminar;
+    }
+
+    public JDialog getDlgCrearEditar() {
+        return dlgCrearEditar;
+    }
+
+    public void setDlgCrearEditar(JDialog dlgCrearEditar) {
+        this.dlgCrearEditar = dlgCrearEditar;
+    }
+
+    public JLabel getLblFoto() {
+        return lblFoto;
+    }
+
+    public void setLblFoto(JLabel lblFoto) {
+        this.lblFoto = lblFoto;
+    }
+
+    public JTextField getTxtApellidos() {
+        return txtApellidos;
+    }
+
+    public void setTxtApellidos(JTextField txtApellidos) {
+        this.txtApellidos = txtApellidos;
+    }
+
+    public JTextField getTxtCedula() {
+        return txtCedula;
+    }
+
+    public void setTxtCedula(JTextField txtCedula) {
+        this.txtCedula = txtCedula;
+    }
+
+    public JTextField getTxtNombres() {
+        return txtNombres;
+    }
+
     /**
      * @param args the command line arguments
      */
+    public void setTxtNombres(JTextField txtNombres) {
+        this.txtNombres = txtNombres;
+    }
 
     public JButton getBtnConsultar() {
         return btnConsultar;
@@ -223,17 +399,30 @@ public class VistaPersonas extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bntAceptar;
+    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnConsultar;
     private javax.swing.JButton btnCrear;
     private javax.swing.JButton btnEditar;
+    private javax.swing.JButton btnExaminar;
     private javax.swing.JButton btnImprimir;
     private javax.swing.JButton btnRemover;
+    private com.toedter.calendar.JDateChooser calFechaNac;
+    private javax.swing.JDialog dlgCrearEditar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblFoto;
     private javax.swing.JLabel lblPersonas;
     private javax.swing.JTable tblPersonas;
+    private javax.swing.JTextField txtApellidos;
     private javax.swing.JTextField txtBuscar;
+    private javax.swing.JTextField txtCedula;
+    private javax.swing.JTextField txtNombres;
     // End of variables declaration//GEN-END:variables
 }

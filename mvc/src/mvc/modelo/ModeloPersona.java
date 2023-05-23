@@ -18,24 +18,26 @@ import java.util.logging.Logger;
  */
 public class ModeloPersona  extends Persona{
     
-    ConeccionPG cpg=new ConeccionPG();
+    ConexionPG cpg=new ConexionPG();
 
     public ModeloPersona() {
     }
     
-   public List<Persona> listarPersonas(){
+   public static List<Persona> listarPersonas(){
+         ConexionPG cpg=new ConexionPG();
           List<Persona> listaPersonas=new ArrayList<Persona>();
         try {
-            String sql="select id, nombre,apellidos,fechanacimiento from personas";
+            String sql="select cedula, nombre,apellidos,fechanacimiento from personas";
             ResultSet rs= cpg.consultaBD(sql);
             while(rs.next()){
                 Persona persona=new Persona();
                 persona.setIdPersona(rs.getString("cedula"));
                 persona.setNombrePersona(rs.getString("nombre"));
                 persona.setApellidosPersona(rs.getString("apellidos"));
-                //persona.setIdPersona(rs.getString("id"));
+                persona.setFechaNacimiento(rs.getDate("fechanacimiento"));
                 listaPersonas.add(persona);
             }
+            rs.close();//CIERRO CONEXION
         return listaPersonas;
         } catch (SQLException ex) {
             Logger.getLogger(ModeloPersona.class.getName()).log(Level.SEVERE, null, ex);
@@ -45,8 +47,8 @@ public class ModeloPersona  extends Persona{
    
    public boolean grabarPersona(){
    String sql;
-   sql="INSERT INTO persona(id,nombre,apellidos) ";
-   sql+=" VALUES('"+getIdPersona()+"','"+getNombrePersona()+"','"+getApellidosPersona()+"')";
+   sql="INSERT INTO personas(cedula,nombre,apellidos,fechanacimiento) ";
+   sql+=" VALUES('"+getIdPersona()+"','"+getNombrePersona()+"','"+getApellidosPersona()+"','"+getFechaNacimiento().toString()+"')";
    
    return cpg.accionBD(sql);
    }
