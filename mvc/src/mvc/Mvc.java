@@ -5,9 +5,9 @@
  */
 package mvc;
 
-import mvc.controlador.ControladorPersonas;
-import mvc.modelo.ModeloPersona;
-import mvc.vista.VistaPersonas;
+import mvc.controlador.ControladorMenuPrincipal;
+import mvc.vista.VistaMenuPrincipal;
+
 
 /**
  *
@@ -20,10 +20,9 @@ public class Mvc {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ModeloPersona modelo=new ModeloPersona();
-        VistaPersonas vista=new VistaPersonas();
-        ControladorPersonas controlador=new ControladorPersonas(modelo, vista);
-        controlador.iniciaControl();
+        VistaMenuPrincipal vistaMenuPrincipal=new VistaMenuPrincipal();
+        ControladorMenuPrincipal controlPrincipal= new ControladorMenuPrincipal(vistaMenuPrincipal);
+        controlPrincipal.iniciaControl();
     }
     
 }
